@@ -1,0 +1,85 @@
+@media (max-width: 480px){
+    #imghome img {
+        width: 300px;
+    }
+    #header .span2{
+        display:none;
+    }
+    .main-title h1 {
+        font-size:2em;
+    }
+}
+
+@media screen and (max-width: 240px){
+    #imghome img {
+        width: 180px;
+    }
+    .main-title h1 {
+        font-size:1.5em;
+    }
+
+}
+@media screen and (max-width: 320px){
+    #imghome img {
+        width: 250px;
+    }
+    #searchCat .searchSelect{
+        margin: 0 0 4%;
+    }
+    #div_tituloSearch, .caja-buscador-1{
+        width: 100%;
+    }
+     .divDetails{
+        padding: 2em 0.3em 1em !important;
+    }
+}
+@media screen and (max-width: 450px){
+    #imghome img {
+        width: 250px;
+    }
+    #searchCat .searchSelect{
+        margin: 0 0 4%;
+    }
+    .block_2  {
+        width: 27%;
+    }
+}
+/*mayor 450px */
+@media screen and (min-width: 450px){
+    .block_2  {
+        width: 140px;
+    }
+}
+@media screen and (min-width: 450px) and (max-width: 640px) {
+
+
+}
+/*menor a 640px*/
+@media screen and (max-width: 640px){
+    .divDetails{
+        margin: 1.5em 0 ;
+    }
+}
+
+@media screen and (min-width: 640px)  and (max-width:800px){
+
+    .divDetails{
+        margin: 1.5em 1em ;
+        width: 95%;
+    }
+}
+@media screen and (min-width: 800px) and (max-width:960px ){
+    .divDetails{
+        margin: 1.5em 1em;
+        width: 90%;
+    }
+}
+@media screen and (min-width: 960px) {
+    .block_1{
+        margin: 0 13%;
+    }
+    .divDetails{
+        margin: 2em auto;
+        width: 70%;
+    }
+}

@@ -1,4 +1,4 @@
-{extends file="base.tpl"}
+{extends file="./base.tpl"}
 
 {block name=content}
 <script type="text/javascript" charset="utf-8">
@@ -7,7 +7,7 @@
                 $('#dt_pedidos').dataTable({
                     "bLengthChange": false,
                     "oLanguage": {
-                        "sUrl": "static/js/js_DataTables/es_ES.txt"
+                        "sUrl": "static/js/datatable/es_ES.txt"
                     },
                     "aoColumnDefs": [
                         { "sType": 'string', 'aTargets': [0] }

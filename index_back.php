@@ -1,6 +1,13 @@
 <?php
-require ('load.php');
-//Smarty
+require ('../class/dbconnect.php');
+require ('../class/xajax_core/xajax.inc.php');
+require ('../class/smarty/Smarty.class.php');
+require ('model.php');
+$xajax=new xajax();
+$xajax->configure('javascript URI', 'js/');
+date_default_timezone_set('America/Lima');
+
+
 function sedeShow(){
     $sede_dic =["ANC"=>"Ancón","ARE"=>"Arequipa","CHI"=>"Chiclayo","HYO"=>"Huancayo","JIC"=>"Jicamarca","MAY"=>"Mayorasgo"];
     $objresponse = new xajaxResponse();
@@ -10,6 +17,18 @@ function sedeShow(){
         $html .="<option value='".$value."' >".$value."</option>";
     }
 
+    // $html .="<option value='Arequipa' >Arequipa</option>";
+    // $html .="<option value='Chiclayo' >Chiclayo</option>";
+    // $html .="<option value='Huancayo' >Huancayo</option>";
+    // $html .="<option value='Jicamarca' >Jicamarca</option>";
+    // $html .="<option value='Mayorazgo' >Mayorazgo</option>";
+    /*
+    for ($i=0; $i < count($result["sede_description"]); $i++) {
+       $html .="<option value=".$result["idsede"][$i].">
+                ".$result["sede_description"][$i]."
+                </option>";
+    }
+    */
     $html .= "</select>";
     $objresponse->assign("sede_cbo","innerHTML",$html);
     return $objresponse;
@@ -163,7 +182,8 @@ $xajax->registerFunction('guardar');
 $xajax->registerFunction('personalShow');
 $xajax->processRequest();
 
+$smarty = new Smarty;
 $smarty->assign("xajax",$xajax->printJavascript());
-$smarty->display('./tpl/home.tpl');
-
+$smarty->display('index.tpl');
 ?>
+

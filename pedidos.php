@@ -125,6 +125,6 @@ $xajax->processRequest();
 $smarty = new Smarty;
 $smarty->assign("xajax",$xajax->printJavascript());
 $smarty->assign("pedidosShow",pedidosShow());
-$smarty->display('pedidos.tpl');
+$smarty->display('./tpl/pedidos.tpl');
 ?>
 

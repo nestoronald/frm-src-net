@@ -21,7 +21,7 @@ function ListaPedidosShow(){
     $data_array[$i] = xmlToArray($result["data"][$i]);
   }
   // print_r(count($data_array));
-  $html = "<table id='dt_ListPedidos' width='100%' class='listAuthor tablacebra-2' cellspacing='0' cellpadding='0' border='0'>
+  $html = "<table  width='100%' class='table table-bordered igp-dt' cellspacing='0' cellpadding='0' border='0'>
               <thead>
                 <tr>
                   <th>Nro</th>
@@ -76,6 +76,6 @@ $xajax->processRequest();
 $smarty = new Smarty;
 $smarty->assign("xajax",$xajax->printJavascript());
 $smarty->assign("ListaPedidosShow",ListaPedidosShow());
-$smarty->display('ListaPedidos.tpl');
+$smarty->display('./tpl/listapedidos.tpl');
 ?>
 
