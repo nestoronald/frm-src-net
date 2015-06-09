@@ -10,9 +10,9 @@ date_default_timezone_set('America/Lima');
 function pedidosShow(){
   $result = pedidosSQL();
 
-  $dictionary = array("sede_igp"=>"Sede descentralizada","are_igp"=>"Area solicitante", "personal_igp"=>"Responsable de la actividad/proyecto",
+  $dictionary = array("sede_igp"=>"Sede descentralizada","are_igp"=>"Area solicitante", "personal_igp"=>"Responsable de la <br> actividad/proyecto",
     "service_name"=>"Nombre  del servicio/proyecto","service_des"=>"Descripcion  del servicio/proyecto",
-    "acceso"=>"Permitir acceso a: nombre/numero ip del equipo / servidor (s)","r_recepcion"=>"Recepción","r_transmision"=>"Transmisión","r_otros"=>"Recepción","t_otros"=>"Transmisión","vol"=>"Volumen de transferencia",
+    "acceso"=>"Permitir acceso a nombre/número <br>IP del equipo/servidor(s)","r_recepcion"=>"Recepción","r_transmision"=>"Transmisión","r_otros"=>"Recepción","t_otros"=>"Transmisión","vol"=>"Volumen de transferencia",
     "puertos"=>"Puertos accesibles ( tcp/udp )","fx_ini"=>"Fecha de inicio del servicio/proyecto",
     "fx_fin"=>"Fecha de fin del servicio/proyecto","observation"=>"Obervaciones","fx_entrega"=>"Fecha entrega informacion");
   // $data_array = xmlToArray($result["data"][0]);
@@ -32,40 +32,26 @@ function pedidosShow(){
     if ($result["id"][$i]>0 and $result["id"][$i]<10 ) {
       $result["id"][$i] = "0".$result["id"][$i];
     }
-    // $html .= "  <p class='row-igp'>
-    //               <span class='block_2' style='min-height: 21px;'>
-    //                 <span><b>Número de pedido</b></span>
-    //               </span>
-    //                 ".$result["id_sede"][$i]."
-    //             </p>";
-    $html .= "  <dl class='dl-horizontal'>
-                  <dt>
-                    <b>Número de pedido</b>
-                  </dt>
-                  <dd>
+    $html .= "  <p class='row-fluid'>
+                  <span class='span3' style='min-height: 21px;'>
+                    <span><b>Número de pedido</b></span>
+                  </span>
                     ".$result["id_sede"][$i]."
-                  </dd>
-                </dl>";
+                </p>";
     foreach ($data_array[$i] as $key => $value) {
       foreach ($dictionary as $key1 => $value2) {
         if ($key == $key1 ) {
           $key = $value2;
         }
       }
-      // $html .= "<p class='row-igp'>
-      //             <span class='block_2' style='min-height: 21px;'>
-      //               <span><b>".$key.": </b></span>
-      //             </span>
-      //               ".$value."
-      //         </p>";
-      $html .= "<dl class='dl-horizontal'>
-                  <dt>
-                    <b>".$key.": </b>
-                  </dt>
-                  <dd>
+      $html .= "<p class='row-fluid'>
+                  <span class='span3' style='min-height: 21px;'>
+                    <span><b>".$key." <span class='separator'>:</span> </b></span>
+                  </span>
+                  <span class='span9'>
                     ".$value."
-                  </dd>
-              </dl>";
+                  </span>
+              </p>";
     }
     $html .= "  <p class='center'><a href='resultado.php?id=".$result["id"][$i]."&id_sede=".$result["id_sede"][$i]."' target='_blank'><span>PDF<span></a></p>
                 </div>

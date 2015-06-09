@@ -113,7 +113,7 @@ div.absolute {
         }
 
         tbody {
-          background-color: #ffffee;
+          background-color: #F1F8FA;
         }
 
         th,td {
