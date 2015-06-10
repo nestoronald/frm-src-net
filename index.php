@@ -4,7 +4,7 @@ require ('load.php');
 function sedeShow(){
     $sede_dic =["ANC"=>"Ancón","ARE"=>"Arequipa","CHI"=>"Chiclayo","HYO"=>"Huancayo","JIC"=>"Jicamarca","MAY"=>"Mayorasgo"];
     $objresponse = new xajaxResponse();
-    $result = comboSedeSQL();
+    // $result = comboSedeSQL();
     $html = "<select name='sede_igp' id='sede_igp' >";
     foreach ($sede_dic as $key => $value) {
         $html .="<option value='".$value."' >".$value."</option>";
