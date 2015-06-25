@@ -67,11 +67,6 @@ border-top-right-radius: 4px;
 background: #ccc url(../../img/001c.jpg) 0 -61px repeat-x;
 font-weight: bold;
 }
-.dataTables_filter {
-width: 50%;
-float: right;
-text-align: right;
-}
 #dt_pedidos_filter input {
 width: 80%;
 }
