@@ -153,7 +153,7 @@ div.absolute {
         }
 
         .uno{
-           margin-right: 5em;
+           margin-right: 3em;
         }
         .line-dos{
             margin-top: 5em;
@@ -185,7 +185,7 @@ $html .= '
     <div class="firm">
       <span class=".line-uno">
         <span class="b-top uno"> Vo.Bo Responsable del Area </span>
-        <span class="b-top dos"> Centro Nacional de Datos Geofísicos</span>
+        <span class="b-top dos"> Oficina de Tecnología de la Información y Datos Geofísicos</span>
       </span>
       <div class="line-dos">
         <span class="b-top"> FIRMA DEL USUARIO</span>
