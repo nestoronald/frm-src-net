@@ -35,7 +35,7 @@
           </span> </td>
       </tr>
       <tr class="">    <td class="label01">UNIDAD FUNCIONAL <small class="muted">(*)</small>:</td> <td><span id="subarea_cbo">
-          <select name='subarea_igp' id='subarea_igp'>
+          <select name='subare_igp' id='subare_igp'>
           </select>
           </span> </td>
       </tr>

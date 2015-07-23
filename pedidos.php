@@ -10,7 +10,7 @@ date_default_timezone_set('America/Lima');
 function pedidosShow(){
   $result = pedidosSQL();
 
-  $dictionary = array("sede_igp"=>"Sede descentralizada","are_igp"=>"Area solicitante", "personal_igp"=>"Responsable de la <br> actividad/proyecto",
+  $dictionary = array("sede_igp"=>"Sede descentralizada","are_igp"=>"Area solicitante", "subarea_igp"=>"Unidad Funcional", "personal_igp"=>"Responsable de la <br> actividad/proyecto",
     "service_name"=>"Nombre  del servicio/proyecto","service_des"=>"Descripcion  del servicio/proyecto",
     "acceso"=>"Permitir acceso a nombre/número <br>IP del equipo/servidor(s)","r_recepcion"=>"Recepción","r_transmision"=>"Transmisión","r_otros"=>"Recepción","t_otros"=>"Transmisión","vol"=>"Volumen de transferencia",
     "puertos"=>"Puertos accesibles ( tcp/udp )","fx_ini"=>"Fecha de inicio del servicio/proyecto",

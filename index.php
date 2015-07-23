@@ -33,7 +33,7 @@ function areaShow($id_sede=0){
 function subareaShow($id_area=0){
     $objresponse = new xajaxResponse();
     $result = comboSubAreaSQL();
-    $html = "<select name='subare_igp' id='subarea_igp'>";
+    $html = "<select name='subarea_igp' id='subarea_igp'>";
     for ($i=0; $i < count($result["subarea_description"]); $i++) {
        $html .="<option value='".$result["subarea_description"][$i]."'>
                 ".$result["subarea_description"][$i]."

@@ -206,7 +206,7 @@ function pedidosShow(){
   }
   $result = pedidoPDFtoSQL($id);
 
-  $dictionary = array("sede_igp"=>"Sede descentralizada","are_igp"=>"Area solicitante", "personal_igp"=>"Responsable de la actividad/proyecto",
+  $dictionary = array("sede_igp"=>"Sede descentralizada","are_igp"=>"Area solicitante", "subarea_igp"=>"Unidad Funcional", "personal_igp"=>"Responsable de la actividad/proyecto",
     "service_name"=>"Nombre  del servicio/proyecto","service_des"=>"Descripción  del servicio/proyecto",
     "acceso"=>"Permitir acceso a: nombre/numero ip del equipo / servidor (s)","r_recepcion"=>"Recepción","r_transmision"=>"Transmisión","r_otros"=>"Recepción",
     "t_otros"=>"Transmisión","vol"=>"Volumen de transferencia",
