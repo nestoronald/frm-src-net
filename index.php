@@ -30,6 +30,19 @@ function areaShow($id_sede=0){
     $objresponse->assign("area_cbo","innerHTML",$html);
     return $objresponse;
 }
+function subareaShow($id_area=0){
+    $objresponse = new xajaxResponse();
+    $result = comboSubAreaSQL();
+    $html = "<select name='subare_igp' id='subarea_igp'>";
+    for ($i=0; $i < count($result["subarea_description"]); $i++) {
+       $html .="<option value='".$result["subarea_description"][$i]."'>
+                ".$result["subarea_description"][$i]."
+                </option>";
+    }
+    $html .= "</select>";
+    $objresponse->assign("subarea_cbo","innerHTML",$html);
+    return $objresponse;
+}
 
 function personalShow(){
     $objresponse = new xajaxResponse();
@@ -159,6 +172,7 @@ function xmlToArray($xml=""){
 
 $xajax->registerFunction('sedeShow');
 $xajax->registerFunction('areaShow');
+$xajax->registerFunction('subareaShow');
 $xajax->registerFunction('guardar');
 $xajax->registerFunction('personalShow');
 $xajax->processRequest();

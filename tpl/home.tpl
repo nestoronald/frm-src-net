@@ -34,6 +34,11 @@
           </select>
           </span> </td>
       </tr>
+      <tr class="">    <td class="label01">UNIDAD FUNCIONAL <small class="muted">(*)</small>:</td> <td><span id="subarea_cbo">
+          <select name='subarea_igp' id='subarea_igp'>
+          </select>
+          </span> </td>
+      </tr>
       <tr class="">
            <td class="label01">RESPONSABLE DE LA ACTIVIDAD / PROYECTO <small class="muted">(*)</small>: </td> <td> <span class="none"><input type="text" id="empleado_name"/></span>
               <span id="personal_cbo">
@@ -76,7 +81,7 @@
 
 
   </form>
-  <script>xajax_sedeShow(); xajax_areaShow();xajax_personalShow();</script>
+  <script>xajax_sedeShow(); xajax_areaShow(); xajax_subareaShow();xajax_personalShow();</script>
 </div>
 
 {/block}

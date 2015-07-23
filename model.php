@@ -59,6 +59,23 @@
         // return $qresult;
         return $result;
     }
+    function comboSubAreaSQL($idArea=0){
+        $andidarea="";
+        if($idArea!=0){
+            $andidarea=" and idarea='$idArea' ";
+        }
+        $i=0;
+        $result = array();
+        $dbh=conx27("personal","wmaster","igpwmaster");
+        $dbh->query("SET NAMES 'utf8'");
+        foreach($dbh->query("SELECT DISTINCT idoffice,office_description,idarea FROM office where office_enable=1") as $row) {
+            $result["subarea_description"][$i]= $row["office_description"];
+            $result["idsubarea"][$i]= $row["idoffice"];
+            $i++;
+        }
+        $dbh = null;
+        return $result;
+    }
     function guardarfrmSQl($id_sede,$data){
         $dbh=conx("resources_services","wmaster","igpwmaster");
         $dbh->query("SET NAMES 'utf8'");
